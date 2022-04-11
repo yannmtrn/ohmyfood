@@ -1,3 +1,45 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+}
 
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+h4 {
+  font-family: "Shrikhand", cursive;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+li {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: bold;
+}
+
+picture {
+  display: flex;
+  justify-content: center;
+}
+
+#location {
+  height: 50px;
+  background-color: rgb(185, 185, 185);
+}
+
+footer {
+  background-color: rgb(34, 30, 30);
+}
 
 /*# sourceMappingURL=style.css.map */
