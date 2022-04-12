@@ -22,6 +22,7 @@ header picture img {
     padding: 15px;
 }
 
+
 ul {
     list-style-type: none;
 }
@@ -40,6 +41,7 @@ picture {
 #location {
     height: 50px;
     background-color: rgb(207, 207, 207);
+    box-shadow: 0px 0px 5px rgba(128,125,125,0.25) inset;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -101,6 +103,8 @@ picture {
             color: #fff;
             font-family: 'Roboto', sans-serif;
             font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
