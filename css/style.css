@@ -17,9 +17,13 @@ a {
   color: #000;
 }
 
-img {
-  width: 100%;
-  object-fit: cover;
+header picture img {
+  width: 40%;
+  padding: 15px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 li {
@@ -35,11 +39,126 @@ picture {
 
 #location {
   height: 50px;
-  background-color: rgb(185, 185, 185);
+  background-color: rgb(207, 207, 207);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#location i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#presentation {
+  padding: 35px;
+  background-color: rgb(239, 239, 239);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+#presentation h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#presentation p {
+  margin-bottom: 20px;
+}
+#presentation button {
+  border: none;
+  text-decoration: none;
+  border-radius: 25px;
+  box-shadow: 0 0 10px #c2c2c2;
+  color: #fff;
+  padding: 15px 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+#functioning {
+  padding: 30px;
+}
+#functioning article {
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgb(239, 239, 239);
+  box-shadow: 0 0 10px #c2c2c2;
+  margin-top: 20px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#functioning article .number {
+  margin-left: -10px;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#functioning article p {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+#functioning i {
+  margin-right: 25px;
+  color: rgb(147, 147, 147);
+}
+
+#restaurant {
+  background-color: rgb(239, 239, 239);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+#restaurant h2 {
+  margin-bottom: 20px;
+}
+#restaurant .restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#restaurant .restaurant article {
+  background-color: #fff;
+  height: 20%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #c2c2c2;
+  margin-bottom: 20px;
+}
+#restaurant .restaurant article img {
+  border-radius: 15px 15px 0 0;
+  height: 175px;
+  width: 100%;
+  object-fit: cover;
+}
+#restaurant .restaurant article .content {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#restaurant .restaurant article .content i {
+  font-size: 20px;
 }
 
 footer {
   background-color: rgb(34, 30, 30);
+  padding: 20px;
+}
+footer li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer li i {
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
