@@ -151,7 +151,44 @@ picture {
   justify-content: space-between;
   align-items: center;
 }
-#restaurant .restaurant article .content i {
+#restaurant .restaurant article .content .text {
+  width: 98%;
+}
+#restaurant .restaurant article .content .favorite {
+  width: 2%;
+}
+#restaurant .restaurant article .content .full_heart {
+  border: none;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -2;
+  transition: all 0.5s ease;
+}
+#restaurant .restaurant article .content .full_heart i {
+  font-size: 20px;
+  background: -moz-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
+  background: -webkit-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#restaurant .restaurant article .content .empty_heart {
+  border: none;
+  background-color: #fff;
+  position: relative;
+}
+#restaurant .restaurant article .content .empty_heart i {
+  font-size: 20px;
+}
+#restaurant .restaurant article .content .empty_heart:hover + .full_heart, #restaurant .restaurant article .content .full_heart:hover {
+  border: none;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+#restaurant .restaurant article .content .empty_heart:hover + .full_heart i, #restaurant .restaurant article .content .full_heart:hover i {
   font-size: 20px;
 }
 

@@ -1,3 +1,7 @@
+$primaire : #9356DC;
+$secondaire : #FF79DA;
+$tertiaire : #99E2D0;
+
 *, ::before, ::after { 
     margin: 0;
     padding: 0;
@@ -130,7 +134,7 @@ picture {
         margin-bottom: 20px;
         width: 40px;
         padding-bottom: 5px;
-        border-bottom: solid 3px #99E2D0;
+        border-bottom: solid 3px $tertiaire;
     }
 
     .content {
@@ -170,7 +174,7 @@ picture {
             box-shadow: 0 0 10px #c2c2c2;
             color: #fff;
             padding: 15px 25px;
-            background: linear-gradient(#FF79DA, #9356DC);
+            background: linear-gradient($secondaire, $primaire);
         }
     }
 }

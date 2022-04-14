@@ -1,3 +1,7 @@
+$primaire : #9356DC;
+$secondaire : #FF79DA;
+$tertiaire : #99E2D0;
+
 *, ::before, ::after { 
     margin: 0;
     padding: 0;
@@ -80,7 +84,7 @@ picture {
         box-shadow: 0 0 10px #c2c2c2;
         color: #fff;
         padding: 15px 25px;
-        background: linear-gradient(#FF79DA, #9356DC);
+        background: linear-gradient($secondaire, $primaire);
     }
 }
 
@@ -100,7 +104,7 @@ picture {
 
         .number {
             margin-left: -10px;
-            background-color: #9356DC;
+            background-color: $primaire;
             width: 25px;
             height: 25px;
             border-radius: 20px;
@@ -162,8 +166,52 @@ picture {
                 justify-content: space-between;
                 align-items: center;
 
-                i {
-                    font-size: 20px;
+                .text {
+                    width: 98%;
+                }
+
+                .favorite {
+                    width: 2%;
+                }
+
+                .full_heart {
+                    border: none;
+                    background-color: #fff;
+                    opacity: 0;
+                    z-index: -2;
+                    transition: all .5s ease;
+
+                    i {
+                        font-size: 20px;
+                        background: -moz-linear-gradient(top, $secondaire 0%, $primaire 100%);
+                        background: -webkit-linear-gradient(top, $secondaire 0%, $primaire 100%);
+                        background: linear-gradient(to bottom, $secondaire 0%, $primaire 100%);
+                        -webkit-background-clip: text;
+                        -moz-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+
+                .empty_heart {
+                    border: none;
+                    background-color: #fff;
+                    position: relative;
+                    
+                    i {
+                        font-size: 20px;
+                    }
+                }
+
+                .empty_heart:hover + .full_heart, .full_heart:hover {
+                    border: none;
+                    opacity: 1;
+                    z-index: 1;
+                    transition: all .5s ease;
+
+                    i {
+                        font-size: 20px;
+                    }
                 }
             }
         }
