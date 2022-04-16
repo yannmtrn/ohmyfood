@@ -84,7 +84,6 @@ picture {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  object-position: bottom;
   background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-size: 100%;
   margin-bottom: -40px;
@@ -119,9 +118,87 @@ picture {
   align-items: center;
   justify-content: space-between;
 }
-#menu i {
+#menu .heart {
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+#menu .heart .full_heart {
+  border: none;
+  background-color: rgb(237, 237, 237);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+#menu .heart .full_heart i {
   font-size: 25px;
-  margin-right: 10px;
+  background: -moz-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
+  background: -webkit-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#menu .heart .empty_heart {
+  border: none;
+  background-color: rgb(237, 237, 237);
+  color: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#menu .heart .empty_heart i {
+  font-size: 25px;
+}
+#menu .heart .empty_heart:hover + .full_heart, #menu .heart .full_heart:hover {
+  border: none;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+#menu .heart .empty_heart:hover + .full_heart i, #menu .heart .full_heart:hover i {
+  font-size: 25px;
+}
+#menu section .content {
+  animation: fadein 1s;
+}
+#menu section .content--1 {
+  animation-duration: 50ms;
+}
+#menu section .content--2 {
+  animation-duration: 100ms;
+}
+#menu section .content--3 {
+  animation-duration: 150ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #menu h3 {
   margin-top: 30px;

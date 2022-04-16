@@ -75,41 +75,29 @@ picture {
     justify-content: center;
 }
 
-#img_laPaletteDuGout {
+@mixin img-menu($url) {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-image: url($url);
     background-size: 100%;
     margin-bottom: -40px;
+}
+
+#img_laPaletteDuGout {
+    @include img-menu("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 
 #img_laNoteEnchantee {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    object-position: bottom;
-    background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-    background-size: 100%;
-    margin-bottom: -40px;
+    @include img-menu("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
 
 #img_aLaFrançaise {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-    background-size: 100%;
-    margin-bottom: -40px;
+    @include img-menu("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
 #img_leDeliceDesSens {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-    background-size: 100%;
-    margin-bottom: -40px;
+    @include img-menu("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 
 #menu {
@@ -124,9 +112,96 @@ picture {
         justify-content: space-between;
     }
 
-    i {
-        font-size: 25px;
-        margin-right: 10px;
+    .heart {
+        position: relative;
+        width: 25px;
+        height: 25px;
+
+        .full_heart {
+            border: none;
+            background-color: rgb(237, 237, 237);
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: -1;
+            transition: all .5s ease;
+
+            i {
+                font-size: 25px;
+                background: -moz-linear-gradient(top, $secondaire 0%, $primaire 100%);
+                background: -webkit-linear-gradient(top, $secondaire 0%, $primaire 100%);
+                background: linear-gradient(to bottom, $secondaire 0%, $primaire 100%);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .empty_heart {
+            border: none;
+            background-color: rgb(237, 237, 237);
+            color: #000;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            
+            i {
+                font-size: 25px;
+            }
+        }
+
+        .empty_heart:hover + .full_heart, .full_heart:hover {
+            border: none;
+            opacity: 1;
+            z-index: 1;
+            transition: all .5s ease;
+
+            i {
+                font-size: 25px;
+            }
+        }
+    }
+
+    section {
+        .content {
+            animation: fadein 1s;
+            &--1 {
+                animation-duration: 50ms;
+            }
+            &--2 {
+                animation-duration: 100ms;
+            }
+            &--3 {
+                animation-duration: 150ms;
+            }
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+
+    @-moz-keyframes fadein { /* sur Firefox */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-webkit-keyframes fadein { /* sur Safari et Chrome */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
     }
 
     h3 {
