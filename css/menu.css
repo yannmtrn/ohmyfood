@@ -233,15 +233,13 @@ picture {
   position: relative;
   width: 25px;
   height: 25px;
+  z-index: 2;
 }
 #menu .heart .full_heart {
   border: none;
   background-color: rgb(237, 237, 237);
   width: 100%;
   height: 100%;
-  opacity: 0;
-  z-index: -1;
-  transition: all 0.5s ease;
 }
 #menu .heart .full_heart i {
   font-size: 25px;
@@ -264,14 +262,16 @@ picture {
 #menu .heart .empty_heart i {
   font-size: 25px;
 }
-#menu .heart .empty_heart:hover + .full_heart, #menu .heart .full_heart:hover {
-  border: none;
-  opacity: 1;
-  z-index: 1;
-  transition: all 0.5s ease;
+#menu .heart .empty_heart:hover {
+  animation: disappear-heart 0.3s linear forwards;
 }
-#menu .heart .empty_heart:hover + .full_heart i, #menu .heart .full_heart:hover i {
-  font-size: 25px;
+@keyframes disappear-heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 #menu #category-menu {
   display: flex;
@@ -286,19 +286,19 @@ picture {
   position: relative;
   display: flex;
   justify-content: space-between;
-  animation: fadein 6s;
+  animation: fadein 6s forwards;
 }
 #menu #category-menu section .content--1 {
   animation-delay: 0s;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 #menu #category-menu section .content--2 {
-  animation-delay: 1.5s;
+  animation-delay: 0s;
   animation-duration: 4s;
 }
 #menu #category-menu section .content--3 {
-  animation-delay: 3s;
-  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-duration: 6s;
 }
 #menu #category-menu section .content .rotate-scale-up {
   opacity: 0;
@@ -355,24 +355,20 @@ picture {
 }
 @-webkit-keyframes slide-left {
   0% {
-    opacity: 0;
     -webkit-transform: translateX(30px);
     transform: translateX(30px);
   }
   100% {
-    opacity: 1;
     -webkit-transform: translateX(10px);
     transform: translateX(10px);
   }
 }
 @keyframes slide-left {
   0% {
-    opacity: 0;
     -webkit-transform: translateX(30px);
     transform: translateX(30px);
   }
   100% {
-    opacity: 1;
     -webkit-transform: translateX(10px);
     transform: translateX(10px);
   }
@@ -386,7 +382,6 @@ picture {
   }
 }
 @-moz-keyframes fadein {
-  /* sur Firefox */
   from {
     opacity: 0;
   }
@@ -395,7 +390,6 @@ picture {
   }
 }
 @-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
   from {
     opacity: 0;
   }

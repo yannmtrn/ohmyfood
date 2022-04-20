@@ -162,10 +162,20 @@ ul {
   list-style-type: none;
 }
 
-#loader {
+#bloc-loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #fff;
+  z-index: 3;
+  opacity: 0.8;
+  animation: disappear 0.2s forwards;
+  animation-delay: 2s;
+}
+#bloc-loader #loader {
   width: 100px;
   height: 100px;
-  border: 10px solid #fff;
+  border: 10px solid transparent;
   border-top: solid 10px #9356DC;
   border-bottom: solid 10px #FF79DA;
   border-radius: 50%;
@@ -174,18 +184,34 @@ ul {
   justify-content: center;
   margin: auto;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   -webkit-animation: spin 1.5s linear infinite;
   -o-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
-#loader i {
+#bloc-loader #loader i {
   color: #99E2D0;
+  font-size: 20px;
 }
 
+@-webkit-keyframes disappear {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -310,6 +336,9 @@ picture {
   box-shadow: 0 0 10px #c2c2c2;
   margin-bottom: 20px;
 }
+#restaurant .restaurant article:hover {
+  box-shadow: 0 0 10px #9356DC;
+}
 #restaurant .restaurant article img {
   border-radius: 15px 15px 0 0;
   height: 175px;
@@ -333,15 +362,13 @@ picture {
   position: relative;
   width: 25px;
   height: 25px;
+  z-index: 2;
 }
 #restaurant .restaurant article .content .heart .full_heart {
   border: none;
   background-color: #fff;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  z-index: -1;
-  transition: all 0.5s ease;
 }
 #restaurant .restaurant article .content .heart .full_heart i {
   font-size: 20px;
@@ -364,14 +391,16 @@ picture {
 #restaurant .restaurant article .content .heart .empty_heart i {
   font-size: 20px;
 }
-#restaurant .restaurant article .content .heart .empty_heart:hover + .full_heart, #restaurant .restaurant article .content .heart .full_heart:hover {
-  border: none;
-  opacity: 1;
-  z-index: 1;
-  transition: all 0.5s ease;
+#restaurant .restaurant article .content .heart .empty_heart:hover {
+  animation: disappear-heart 0.3s linear forwards;
 }
-#restaurant .restaurant article .content .heart .empty_heart:hover + .full_heart i, #restaurant .restaurant article .content .heart .full_heart:hover i {
-  font-size: 20px;
+@keyframes disappear-heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media screen and (min-width: 769px) {

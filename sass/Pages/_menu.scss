@@ -58,15 +58,13 @@ picture {
         position: relative;
         width: 25px;
         height: 25px;
+        z-index: 2;
 
         .full_heart {
             border: none;
             background-color: rgb(237, 237, 237);
             width: 100%;
             height: 100%;
-            opacity: 0;
-            z-index: -1;
-            transition: all .5s ease;
 
             i {
                 font-size: 25px;
@@ -91,17 +89,19 @@ picture {
             i {
                 font-size: 25px;
             }
-        }
 
-        .empty_heart:hover + .full_heart, .full_heart:hover {
-            border: none;
-            opacity: 1;
-            z-index: 1;
-            transition: all .5s ease;
-
-            i {
-                font-size: 25px;
+            &:hover {
+                animation: disappear-heart 0.3s linear forwards;
             }
+        }
+    }
+
+    @keyframes disappear-heart {
+        0% {
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
         }
     }
 
@@ -119,18 +119,18 @@ picture {
                 position: relative;
                 display: flex;
                 justify-content: space-between;
-                animation: fadein 6s;
+                animation: fadein 6s forwards;
                 &--1 {
                     animation-delay: 0s;
-                    animation-duration: 3s;
+                    animation-duration: 2s;
                 }
                 &--2 {
-                    animation-delay: 1.5s;
+                    animation-delay: 0s;
                     animation-duration: 4s;
                 }
                 &--3 {
-                    animation-delay: 3s;
-                    animation-duration: 5s;
+                    animation-delay: 0s;
+                    animation-duration: 6s;
                 }
     
                 .rotate-scale-up {
@@ -198,12 +198,10 @@ picture {
     
         @-webkit-keyframes slide-left {
             0% {
-                opacity: 0;
             -webkit-transform: translateX(30px);
                     transform: translateX(30px);
             }
             100% {
-                opacity: 1;
             -webkit-transform: translateX(10px);
                     transform: translateX(10px);
             }
@@ -211,12 +209,10 @@ picture {
     
         @keyframes slide-left {
             0% {
-                opacity: 0;
             -webkit-transform: translateX(30px);
                     transform: translateX(30px);
             }
             100% {
-                opacity: 1;
             -webkit-transform: translateX(10px);
                     transform: translateX(10px);
             }
@@ -231,7 +227,7 @@ picture {
             }
         }
     
-        @-moz-keyframes fadein { /* sur Firefox */
+        @-moz-keyframes fadein {
             from {
                 opacity:0;
             }
@@ -239,7 +235,7 @@ picture {
                 opacity:1;
             }
         }
-        @-webkit-keyframes fadein { /* sur Safari et Chrome */
+        @-webkit-keyframes fadein {
             from {
                 opacity:0;
             }
