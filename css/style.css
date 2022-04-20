@@ -83,7 +83,7 @@ picture {
 }
 
 #functioning {
-  padding: 30px;
+  padding: 20px;
 }
 #functioning article {
   width: 100%;
@@ -231,6 +231,67 @@ footer li i {
   width: 18px;
   height: 18px;
   margin-right: 10px;
+}
+
+@media screen and (min-width: 769px) {
+  header picture img {
+    width: 20%;
+    padding: 15px;
+  }
+
+  #functioning {
+    padding: 40px;
+  }
+
+  #restaurant {
+    padding: 30px;
+  }
+  #restaurant .restaurant {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #restaurant .restaurant article {
+    width: 48%;
+  }
+
+  footer h4 {
+    font-size: 24px;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer ul li {
+    width: 23%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 993px) {
+  #functioning {
+    padding: 50px;
+  }
+  #functioning div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #functioning div article {
+    width: 30%;
+  }
+
+  #restaurant {
+    padding: 40px;
+  }
+  #restaurant .restaurant {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #restaurant .restaurant article {
+    width: 23%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

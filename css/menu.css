@@ -72,38 +72,38 @@ picture {
 }
 
 #img_laPaletteDuGout {
-  width: 100%;
   height: 250px;
-  object-fit: cover;
+  background-position: center;
+  width: 100%;
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  background-size: 100%;
+  background-size: cover;
   margin-bottom: -40px;
 }
 
 #img_laNoteEnchantee {
-  width: 100%;
   height: 250px;
-  object-fit: cover;
+  background-position: center;
+  width: 100%;
   background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-  background-size: 100%;
+  background-size: cover;
   margin-bottom: -40px;
 }
 
 #img_aLaFrançaise {
-  width: 100%;
   height: 250px;
-  object-fit: cover;
+  background-position: center;
+  width: 100%;
   background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-  background-size: 100%;
+  background-size: cover;
   margin-bottom: -40px;
 }
 
 #img_leDeliceDesSens {
-  width: 100%;
   height: 250px;
-  object-fit: cover;
+  background-position: center;
+  width: 100%;
   background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-  background-size: 100%;
+  background-size: cover;
   margin-bottom: -40px;
 }
 
@@ -111,6 +111,8 @@ picture {
   padding: 20px;
   background-color: rgb(237, 237, 237);
   border-radius: 35px 35px 0 0;
+  display: flex;
+  flex-direction: column;
 }
 #menu #title {
   display: flex;
@@ -162,17 +164,105 @@ picture {
 #menu .heart .empty_heart:hover + .full_heart i, #menu .heart .full_heart:hover i {
   font-size: 25px;
 }
-#menu section .content {
-  animation: fadein 1s;
+#menu #category-menu {
+  display: flex;
+  flex-direction: column;
 }
-#menu section .content--1 {
-  animation-duration: 50ms;
+#menu #category-menu section .content {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  height: 45px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  animation: fadein 6s;
 }
-#menu section .content--2 {
-  animation-duration: 100ms;
+#menu #category-menu section .content--1 {
+  animation-delay: 0s;
+  animation-duration: 3s;
 }
-#menu section .content--3 {
-  animation-duration: 150ms;
+#menu #category-menu section .content--2 {
+  animation-delay: 1.5s;
+  animation-duration: 4s;
+}
+#menu #category-menu section .content--3 {
+  animation-delay: 3s;
+  animation-duration: 5s;
+}
+#menu #category-menu section .content .rotate-scale-up {
+  opacity: 0;
+}
+#menu #category-menu section .content:hover .slide-left {
+  width: 65px;
+  height: 65px;
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+#menu #category-menu section .content:hover .rotate-scale-up {
+  width: 32px;
+  height: 32px;
+  font-size: 30px;
+  color: #fff;
+  opacity: 1;
+  -webkit-animation: rotate-scale-up 0.65s linear both;
+  animation: rotate-scale-up 0.65s linear both;
+}
+@-webkit-keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(100deg);
+    transform: scale(1) rotateZ(100deg);
+  }
+  50% {
+    -webkit-transform: scale(1.5) rotateZ(200deg);
+    transform: scale(1.5) rotateZ(200deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(100deg);
+    transform: scale(1) rotateZ(100deg);
+  }
+  50% {
+    -webkit-transform: scale(1.5) rotateZ(200deg);
+    transform: scale(1.5) rotateZ(200deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
 }
 @keyframes fadein {
   from {
@@ -200,30 +290,22 @@ picture {
     opacity: 1;
   }
 }
-#menu h3 {
+#menu #category-menu h3 {
   margin-top: 30px;
   margin-bottom: 20px;
   width: 40px;
   padding-bottom: 5px;
   border-bottom: solid 3px #99E2D0;
 }
-#menu .content {
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  height: 45px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-#menu .text {
+#menu #category-menu .text {
   width: 80%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#menu .price {
+#menu #category-menu .price {
+  width: 10%;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -243,6 +325,9 @@ picture {
   padding: 15px 25px;
   background: linear-gradient(#FF79DA, #9356DC);
 }
+#menu .button button:hover {
+  filter: brightness(110%);
+}
 
 footer {
   background-color: rgb(34, 30, 30);
@@ -261,6 +346,95 @@ footer li i {
   width: 18px;
   height: 18px;
   margin-right: 10px;
+}
+
+@media screen and (min-width: 769px) {
+  #img_laPaletteDuGout {
+    height: 400px;
+    width: 100%;
+    background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: cover;
+    margin-bottom: -40px;
+  }
+
+  #img_laNoteEnchantee {
+    height: 400px;
+    width: 100%;
+    background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    background-size: cover;
+    margin-bottom: -40px;
+  }
+
+  #img_aLaFrançaise {
+    height: 400px;
+    width: 100%;
+    background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-size: cover;
+    margin-bottom: -40px;
+  }
+
+  #img_leDeliceDesSens {
+    height: 400px;
+    width: 100%;
+    background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-size: cover;
+    margin-bottom: -40px;
+  }
+
+  header i {
+    font-size: 25px;
+  }
+
+  header picture img {
+    width: 60%;
+    padding: 15px;
+  }
+
+  #bloc_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #menu {
+    width: 80%;
+  }
+  #menu #category-menu {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #menu #category-menu section {
+    width: 100%;
+  }
+
+  footer h5 {
+    font-size: 24px;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer ul li {
+    width: 23%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 993px) {
+  #menu {
+    width: 80%;
+  }
+  #menu #category-menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #menu #category-menu section {
+    width: 30%;
+  }
+  #menu #category-menu section .content:hover {
+    margin-left: 0;
+  }
 }
 
 /*# sourceMappingURL=menu.css.map */
