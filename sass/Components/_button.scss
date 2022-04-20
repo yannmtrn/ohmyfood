@@ -1,0 +1,19 @@
+.button_gradient {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+
+    button {
+        border: none;
+        text-decoration: none;
+        border-radius: 25px;
+        box-shadow: 0 0 10px #c2c2c2;
+        color: #fff;
+        padding: 15px 25px;
+        background: linear-gradient($secondaire, $primaire);
+    }
+    
+    button:hover {
+        filter: brightness(110%);
+    }
+}

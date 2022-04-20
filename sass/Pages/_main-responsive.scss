@@ -1,0 +1,56 @@
+@media screen and (min-width: 769px) {
+
+    header picture img {
+        width: 20%;
+        padding: 15px;
+    }
+
+    #functioning {
+        padding: 40px;
+    }
+
+    #restaurant {
+        padding: 30px;
+
+        .restaurant {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            article {
+                width: 48%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 993px) {
+
+    #functioning {
+        padding: 50px;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            article {
+                width: 30%;
+            }
+        }
+    }
+
+    #restaurant {
+        padding: 40px;
+
+        .restaurant {
+            flex-direction: row;
+            justify-content: space-between;
+
+            article {
+                width: 23%;
+            }
+        }
+    }
+    
+}
