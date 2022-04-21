@@ -114,7 +114,7 @@ picture {
                 position: relative;
                 display: flex;
                 justify-content: space-between;
-                animation: fadein 6s forwards;
+                animation: fadein 8s forwards;
                 &--1 {
                     animation-delay: 0s;
                     animation-duration: 2s;
@@ -126,6 +126,10 @@ picture {
                 &--3 {
                     animation-delay: 0s;
                     animation-duration: 6s;
+                }
+                &--4 {
+                    animation-delay: 0s;
+                    animation-duration: 8s;
                 }
     
                 .rotate-check {
@@ -159,6 +163,22 @@ picture {
                         animation: rotate-check 0.5s linear both;
                     }
                 }
+                
+                &-text {
+                    width: 80%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            
+                &-price {
+                    width: 10%;
+                    margin-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    align-items: flex-end;
+                }
             }
         }
     
@@ -168,22 +188,6 @@ picture {
             width: 40px;
             padding-bottom: 5px;
             border-bottom: solid 3px $tertiaire;
-        }
-    
-        .text {
-            width: 80%;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-    
-        .price {
-            width: 10%;
-            margin-left: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-            align-items: flex-end;
         }
     }
 }

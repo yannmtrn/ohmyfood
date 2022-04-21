@@ -52,7 +52,7 @@ li a {
   font-weight: bold;
 }
 
-.price {
+.content-price {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
@@ -110,7 +110,7 @@ li a {
   font-weight: bold;
 }
 
-.price {
+.content-price {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
@@ -404,7 +404,7 @@ picture {
   position: relative;
   display: flex;
   justify-content: space-between;
-  animation: fadein 6s forwards;
+  animation: fadein 8s forwards;
 }
 #menu #category-menu section .content--1 {
   animation-delay: 0s;
@@ -417,6 +417,10 @@ picture {
 #menu #category-menu section .content--3 {
   animation-delay: 0s;
   animation-duration: 6s;
+}
+#menu #category-menu section .content--4 {
+  animation-delay: 0s;
+  animation-duration: 8s;
 }
 #menu #category-menu section .content .rotate-check {
   opacity: 0;
@@ -446,26 +450,26 @@ picture {
   -webkit-animation: rotate-check 0.5s linear both;
   animation: rotate-check 0.5s linear both;
 }
-#menu #category-menu h3 {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  width: 40px;
-  padding-bottom: 5px;
-  border-bottom: solid 3px #99E2D0;
-}
-#menu #category-menu .text {
+#menu #category-menu section .content-text {
   width: 80%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#menu #category-menu .price {
+#menu #category-menu section .content-price {
   width: 10%;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: flex-end;
+}
+#menu #category-menu h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 40px;
+  padding-bottom: 5px;
+  border-bottom: solid 3px #99E2D0;
 }
 
 @media screen and (min-width: 769px) {
