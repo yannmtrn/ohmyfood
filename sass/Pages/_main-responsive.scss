@@ -29,12 +29,12 @@
     #functioning {
         padding: 50px;
 
-        div {
+        ol {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
 
-            article {
+            li {
                 width: 30%;
             }
         }

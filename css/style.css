@@ -34,7 +34,18 @@ p {
   font-size: 16px;
 }
 
+#functioning li {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-weight: bold;
+}
+
 li {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: bold;
+}
+li a {
   font-family: "Roboto", sans-serif;
   color: #fff;
   font-weight: bold;
@@ -81,7 +92,18 @@ p {
   font-size: 16px;
 }
 
+#functioning li {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-weight: bold;
+}
+
 li {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: bold;
+}
+li a {
   font-family: "Roboto", sans-serif;
   color: #fff;
   font-weight: bold;
@@ -162,36 +184,66 @@ ul {
   list-style-type: none;
 }
 
-#bloc-loader {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: #fff;
-  z-index: 3;
-  opacity: 0.8;
-  animation: disappear 0.2s forwards;
-  animation-delay: 2s;
+#functioning {
+  padding: 20px;
 }
-#bloc-loader #loader {
-  width: 100px;
-  height: 100px;
-  border: 10px solid transparent;
-  border-top: solid 10px #9356DC;
-  border-bottom: solid 10px #FF79DA;
-  border-radius: 50%;
+
+#functioning ol {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#functioning ol li {
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgb(239, 239, 239);
+  box-shadow: 0 0 10px #c2c2c2;
+  margin-top: 25px;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#functioning ol .number {
+  margin-left: -10px;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  position: absolute;
-  inset: 0;
-  -webkit-animation: spin 1.5s linear infinite;
-  -o-animation: spin 1.5s linear infinite;
-  animation: spin 1.5s linear infinite;
 }
-#bloc-loader #loader i {
-  color: #99E2D0;
-  font-size: 20px;
+
+#functioning ol p {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+#functioning li:hover {
+  background-color: rgb(245, 237, 254);
+  box-shadow: 0 0 10px #c2c2c2;
+}
+
+#functioning li:hover .number {
+  color: #fff;
+}
+
+#functioning li:hover i {
+  color: #9356DC;
+}
+
+#functioning i {
+  margin-right: 25px;
+  color: rgb(147, 147, 147);
 }
 
 @-webkit-keyframes disappear {
@@ -212,6 +264,22 @@ ul {
     z-index: -2;
   }
 }
+@-webkit-keyframes disappear-heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes disappear-heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -228,6 +296,92 @@ ul {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes rotate-check {
+  0% {
+    -webkit-transform: rotateZ(100deg);
+    transform: rotateZ(100deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(200deg);
+    transform: rotateZ(200deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes rotate-check {
+  0% {
+    -webkit-transform: rotateZ(100deg);
+    transform: rotateZ(100deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(200deg);
+    transform: rotateZ(200deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#bloc-loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #fff;
+  z-index: 3;
+  opacity: 0.8;
+  animation: disappear 0.2s forwards;
+  animation-delay: 2s;
+}
+
+#bloc-loader #loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-top: solid 10px #9356DC;
+  border-bottom: solid 10px #FF79DA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  inset: 0;
+  -webkit-animation: spin 1.5s linear infinite;
+  -o-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+#bloc-loader #loader i {
+  color: #99E2D0;
+  font-size: 20px;
+}
+
 header picture img {
   width: 40%;
   padding: 15px;
@@ -267,54 +421,6 @@ picture {
   margin-bottom: 20px;
 }
 
-#functioning {
-  padding: 20px;
-}
-#functioning article {
-  width: 100%;
-  border-radius: 15px;
-  background-color: rgb(239, 239, 239);
-  box-shadow: 0 0 10px #c2c2c2;
-  margin-top: 25px;
-  height: 65px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#functioning article .number {
-  margin-left: -10px;
-  background-color: #9356DC;
-  width: 25px;
-  height: 25px;
-  border-radius: 20px;
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#functioning article p {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-}
-#functioning article:hover {
-  background-color: rgb(245, 237, 254);
-  box-shadow: 0 0 10px #c2c2c2;
-}
-#functioning article:hover .number {
-  color: #fff;
-}
-#functioning article:hover i {
-  color: #9356DC;
-}
-#functioning i {
-  margin-right: 25px;
-  color: rgb(147, 147, 147);
-}
-
 #restaurant {
   background-color: rgb(239, 239, 239);
   display: flex;
@@ -329,48 +435,63 @@ picture {
   flex-direction: column;
   justify-content: space-between;
 }
-#restaurant .restaurant article {
+#restaurant .restaurant .new {
+  position: relative;
+}
+#restaurant .restaurant .new::before {
+  content: "Nouveau";
+  width: 5rem;
+  height: 1.5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0.5rem;
+  right: 0.5rem;
+  position: absolute;
+}
+#restaurant .restaurant .card {
   background-color: #fff;
   height: 20%;
   border-radius: 15px;
   box-shadow: 0 0 10px #c2c2c2;
   margin-bottom: 20px;
 }
-#restaurant .restaurant article:hover {
+#restaurant .restaurant .card:hover {
   box-shadow: 0 0 10px #9356DC;
 }
-#restaurant .restaurant article img {
+#restaurant .restaurant .card img {
   border-radius: 15px 15px 0 0;
   height: 175px;
   width: 100%;
   object-fit: cover;
 }
-#restaurant .restaurant article .content {
+#restaurant .restaurant .card .content {
   padding: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#restaurant .restaurant article .content .text {
+#restaurant .restaurant .card .content-text {
   width: 98%;
 }
-#restaurant .restaurant article .content .favorite {
+#restaurant .restaurant .card .content-heart {
   width: 2%;
-}
-#restaurant .restaurant article .content .heart {
   position: relative;
   width: 25px;
   height: 25px;
   z-index: 2;
 }
-#restaurant .restaurant article .content .heart .full_heart {
+#restaurant .restaurant .card .content-heart .full_heart {
   border: none;
   background-color: #fff;
   width: 100%;
   height: 100%;
 }
-#restaurant .restaurant article .content .heart .full_heart i {
+#restaurant .restaurant .card .content-heart .full_heart i {
   font-size: 20px;
   background: -moz-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
   background: -webkit-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
@@ -380,7 +501,7 @@ picture {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#restaurant .restaurant article .content .heart .empty_heart {
+#restaurant .restaurant .card .content-heart .empty_heart {
   border: none;
   background-color: #fff;
   color: #000;
@@ -388,19 +509,11 @@ picture {
   height: 100%;
   position: absolute;
 }
-#restaurant .restaurant article .content .heart .empty_heart i {
+#restaurant .restaurant .card .content-heart .empty_heart i {
   font-size: 20px;
 }
-#restaurant .restaurant article .content .heart .empty_heart:hover {
+#restaurant .restaurant .card .content-heart .empty_heart:hover {
   animation: disappear-heart 0.3s linear forwards;
-}
-@keyframes disappear-heart {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 @media screen and (min-width: 769px) {
@@ -429,12 +542,12 @@ picture {
   #functioning {
     padding: 50px;
   }
-  #functioning div {
+  #functioning ol {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  #functioning div article {
+  #functioning ol li {
     width: 30%;
   }
 

@@ -34,10 +34,24 @@ p {
     font-size: 16px;
 }
 
+#functioning {
+    li {
+        font-family: 'Roboto', sans-serif;
+        color: #000;
+        font-weight: bold;
+    }
+}
+
 li {
     font-family: 'Roboto', sans-serif;
     color: #fff;
     font-weight: bold;
+
+    a {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-weight: bold;
+    }
 }
 
 .price {
