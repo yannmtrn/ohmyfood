@@ -56,6 +56,12 @@ li a {
   font-weight: bold;
 }
 
+.new::before {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
 h2 {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
@@ -112,6 +118,12 @@ li a {
 .content-price {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+}
+
+.new::before {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 footer {
@@ -443,7 +455,7 @@ picture {
   width: 5rem;
   height: 1.5rem;
   background-color: #99E2D0;
-  color: #1b6150;
+  color: #278870;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -476,7 +488,7 @@ picture {
   align-items: center;
 }
 #restaurant .restaurant .card .content-text {
-  width: 98%;
+  width: 75%;
 }
 #restaurant .restaurant .card .content-heart {
   width: 2%;
@@ -484,6 +496,9 @@ picture {
   width: 25px;
   height: 25px;
   z-index: 2;
+  float: right;
+  margin-top: -47px;
+  margin-right: 20px;
 }
 #restaurant .restaurant .card .content-heart .full_heart {
   border: none;

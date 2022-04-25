@@ -68,7 +68,7 @@ picture {
             width: 5rem;
             height: 1.5rem;
             background-color: $tertiaire;
-            color: darken($color: $tertiaire, $amount: 50%);
+            color: darken($color: $tertiaire, $amount: 40%);
             border-radius: 3px;
             display: flex;
             align-items: center;
@@ -104,7 +104,7 @@ picture {
                 align-items: center;
 
                 &-text {
-                    width: 98%;
+                    width: 75%;
                 }
 
                 &-heart {
@@ -113,6 +113,9 @@ picture {
                     width: 25px;
                     height: 25px;
                     z-index: 2;
+                    float: right;
+                    margin-top: -47px;
+                    margin-right: 20px;
 
                     .full_heart {
                         border: none;

@@ -57,6 +57,12 @@ li a {
   font-weight: bold;
 }
 
+.new::before {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
 h2 {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
@@ -113,6 +119,12 @@ li a {
 .content-price {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+}
+
+.new::before {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 footer {
