@@ -491,7 +491,7 @@ picture {
   width: 75%;
 }
 #restaurant .restaurant .card .content-heart {
-  width: 2%;
+  width: 5%;
   position: relative;
   width: 25px;
   height: 25px;
@@ -507,7 +507,7 @@ picture {
   height: 100%;
 }
 #restaurant .restaurant .card .content-heart .full_heart i {
-  font-size: 20px;
+  font-size: 22px;
   background: -moz-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
   background: -webkit-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
@@ -525,7 +525,7 @@ picture {
   position: absolute;
 }
 #restaurant .restaurant .card .content-heart .empty_heart i {
-  font-size: 20px;
+  font-size: 22px;
 }
 #restaurant .restaurant .card .content-heart .empty_heart:hover {
   animation: disappear-heart 0.3s linear forwards;
