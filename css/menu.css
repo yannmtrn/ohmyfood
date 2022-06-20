@@ -140,6 +140,11 @@ footer li {
   align-items: center;
   margin-bottom: 10px;
 }
+footer li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 footer li i {
   width: 18px;
   height: 18px;
@@ -275,28 +280,34 @@ ul {
     transform: rotateZ(360deg);
   }
 }
-@keyframes fadein {
-  from {
+@keyframes myAnim {
+  0% {
     opacity: 0;
+    transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
-@-moz-keyframes fadein {
-  from {
+@-moz-keyframes myAnim {
+  0% {
     opacity: 0;
+    transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
-@-webkit-keyframes fadein {
-  from {
+@-webkit-keyframes myAnim {
+  0% {
     opacity: 0;
+    -webkit-transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
   }
 }
 header {
@@ -416,23 +427,23 @@ picture {
   position: relative;
   display: flex;
   justify-content: space-between;
-  animation: fadein 8s forwards;
+  animation: myAnim 1s ease 0s forwards;
 }
 #menu #category-menu section .content--1 {
-  animation-delay: 0s;
-  animation-duration: 2s;
+  opacity: 0;
+  animation-delay: 200ms;
 }
 #menu #category-menu section .content--2 {
-  animation-delay: 0s;
-  animation-duration: 4s;
+  opacity: 0;
+  animation-delay: 400ms;
 }
 #menu #category-menu section .content--3 {
-  animation-delay: 0s;
-  animation-duration: 6s;
+  opacity: 0;
+  animation-delay: 600ms;
 }
 #menu #category-menu section .content--4 {
-  animation-delay: 0s;
-  animation-duration: 8s;
+  opacity: 0;
+  animation-delay: 800ms;
 }
 #menu #category-menu section .content .rotate-check {
   opacity: 0;
@@ -464,9 +475,6 @@ picture {
 }
 #menu #category-menu section .content-text {
   width: 80%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 #menu #category-menu section .content-price {
   width: 10%;

@@ -114,22 +114,22 @@ picture {
                 position: relative;
                 display: flex;
                 justify-content: space-between;
-                animation: fadein 8s forwards;
+                animation: myAnim 1s ease 0s forwards;
                 &--1 {
-                    animation-delay: 0s;
-                    animation-duration: 2s;
+                    opacity: 0;
+                    animation-delay: 200ms;
                 }
                 &--2 {
-                    animation-delay: 0s;
-                    animation-duration: 4s;
+                    opacity: 0;
+                    animation-delay: 400ms;
                 }
                 &--3 {
-                    animation-delay: 0s;
-                    animation-duration: 6s;
+                    opacity: 0;
+                    animation-delay: 600ms;
                 }
                 &--4 {
-                    animation-delay: 0s;
-                    animation-duration: 8s;
+                    opacity: 0;
+                    animation-delay: 800ms;
                 }
     
                 .rotate-check {
@@ -165,14 +165,14 @@ picture {
                 }
                 
                 &-text {
-                    width: 80%;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                    width: calc(80%);
+                    // white-space: nowrap;
+                    // overflow: hidden;
+                    // text-overflow: ellipsis;
                 }
             
                 &-price {
-                    width: 10%;
+                    width: calc(10%);
                     margin-left: 20px;
                     display: flex;
                     flex-direction: column;

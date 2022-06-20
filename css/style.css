@@ -139,6 +139,11 @@ footer li {
   align-items: center;
   margin-bottom: 10px;
 }
+footer li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 footer li i {
   width: 18px;
   height: 18px;
@@ -336,28 +341,34 @@ ul {
     transform: rotateZ(360deg);
   }
 }
-@keyframes fadein {
-  from {
+@keyframes myAnim {
+  0% {
     opacity: 0;
+    transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
-@-moz-keyframes fadein {
-  from {
+@-moz-keyframes myAnim {
+  0% {
     opacity: 0;
+    transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
-@-webkit-keyframes fadein {
-  from {
+@-webkit-keyframes myAnim {
+  0% {
     opacity: 0;
+    -webkit-transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
   }
 }
 #bloc-loader {

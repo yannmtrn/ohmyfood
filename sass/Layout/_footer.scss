@@ -14,6 +14,12 @@ footer {
         align-items: center;
         margin-bottom: 10px;
 
+        a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
         i {
             width: 18px;
             height: 18px;
