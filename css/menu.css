@@ -475,6 +475,12 @@ picture {
 }
 #menu #category-menu section .content-text {
   width: 80%;
+  overflow: hidden;
+}
+#menu #category-menu section .content-text h4, #menu #category-menu section .content-text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #menu #category-menu section .content-price {
   width: 10%;
